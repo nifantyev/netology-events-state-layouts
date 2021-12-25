@@ -1,7 +1,24 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
 .products {
+  max-width: 1440px;
   padding: 10px;
+  margin: 0 auto;
 }
 
 .icon-switch-container {
@@ -14,4 +31,59 @@
   background: transparent;
   border: none;
   cursor: pointer;
+}
+
+.cards {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 30px;
+  padding-top: 10px;
+  box-shadow: 0px 7px 5px 0px #E1E6EA;
+}
+
+.card__name {
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.card__color {
+  text-align: center;
+}
+
+.card__price {
+  position: absolute;
+  left: 30px;
+  bottom: 20px;
+  color: rgb(211, 63, 52);
+  font-weight: bold;
+}
+
+.card__addtocart {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  background: transparent;
+  border: 1px solid rgb(211, 63, 52);
+  border-radius: 20px;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  color: rgb(211, 63, 52);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card__img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
 }

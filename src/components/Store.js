@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import IconSwitch from './IconSwitch';
+import CardsView from './CardsView';
+import ListView from './ListView';
 
 const Store = ({ products }) => {
   const [layout, setLayout] = useState('view_module');
@@ -20,10 +22,7 @@ const Store = ({ products }) => {
           onSwitch={switchLayout}
         />
       </div>
-      <p>{layout === 'view_module' ? 'CardsView' : 'ListView'}</p>
-      {products.map((product, index) => (
-        <div key={index}>{product.name}</div>
-      ))}
+      {layout === 'view_module' ? <CardsView cards={products} /> : <ListView />}
     </div>
   );
 };
