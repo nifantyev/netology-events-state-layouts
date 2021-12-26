@@ -11,6 +11,7 @@ html {
 }
 
 img {
+  display: block;
   width: 100%;
   height: auto;
 }
@@ -86,4 +87,57 @@ img {
   left: 0;
   top: 0;
   z-index: -1;
+}
+
+.item {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  margin-bottom: 5px;
+  background-color: rgb(245, 245, 245);
+  overflow: hidden;
+}
+
+.item__img {
+  height: 100%;
+  width: 20%;
+}
+
+.item__img-pic {
+  height: 150%;
+  width: auto;
+  object-position: 0 -40px;
+
+}
+
+.item__name {
+  width: 20%;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.item__color {
+  width: 15%;
+  text-align: center;
+}
+
+.item__price {
+  width: 15%;
+  color: rgb(211, 63, 52);
+  font-weight: bold;
+}
+
+.item__addtocart {
+  height: 30px;
+  background: transparent;
+  border: 1px solid rgb(211, 63, 52);
+  border-radius: 20px;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  color: rgb(211, 63, 52);
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 20px;
 }

@@ -22,7 +22,11 @@ const Store = ({ products }) => {
           onSwitch={switchLayout}
         />
       </div>
-      {layout === 'view_module' ? <CardsView cards={products} /> : <ListView />}
+      {layout === 'view_module' ? (
+        <CardsView cards={products} />
+      ) : (
+        <ListView items={products} />
+      )}
     </div>
   );
 };
