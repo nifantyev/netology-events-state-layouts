@@ -9,9 +9,9 @@ const propTypes = {
 const ListView = ({ items }) => {
   return (
     <div className="items">
-      {items.map((item, index) => (
+      {items.map((item) => (
         <ShopItem
-          key={index}
+          key={item.id}
           name={item.name}
           color={item.color}
           price={item.price}

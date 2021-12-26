@@ -9,9 +9,9 @@ const propTypes = {
 const CardsView = ({ cards }) => {
   return (
     <div className="cards">
-      {cards.map((card, index) => (
+      {cards.map((card) => (
         <ShopCard
-          key={index}
+          key={card.id}
           name={card.name}
           color={card.color}
           price={card.price}
