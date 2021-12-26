@@ -106,10 +106,9 @@ img {
 }
 
 .item__img-pic {
-  height: 150%;
-  width: auto;
+  height: auto;
+  width: 140px;
   object-position: 0 -40px;
-
 }
 
 .item__name {
