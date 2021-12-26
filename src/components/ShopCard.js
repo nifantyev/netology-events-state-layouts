@@ -1,4 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
+const propTypes = {
+  name: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  color: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+};
 
 const ShopCard = ({ name, price, color, img }) => {
   return (
@@ -11,5 +19,7 @@ const ShopCard = ({ name, price, color, img }) => {
     </div>
   );
 };
+
+ShopCard.propTypes = propTypes;
 
 export default ShopCard;

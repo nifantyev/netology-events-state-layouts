@@ -1,5 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ShopItem from './ShopItem';
+
+const propTypes = {
+  items: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 
 const ListView = ({ items }) => {
   return (
@@ -16,5 +21,7 @@ const ListView = ({ items }) => {
     </div>
   );
 };
+
+ListView.propTypes = propTypes;
 
 export default ListView;

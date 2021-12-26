@@ -1,4 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
+const propTypes = {
+  icon: PropTypes.string.isRequired,
+  onSwitch: PropTypes.func.isRequired,
+};
 
 const IconSwitch = ({ icon, onSwitch }) => {
   return (
@@ -7,5 +13,7 @@ const IconSwitch = ({ icon, onSwitch }) => {
     </button>
   );
 };
+
+IconSwitch.propTypes = propTypes;
 
 export default IconSwitch;
